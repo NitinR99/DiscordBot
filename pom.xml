@@ -25,4 +25,21 @@
             <url>https://jcenter.bintray.com</url>
         </repository>
     </repositories>
+
+    <build>
+
+        <plugins>
+            <plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>3.0.2</version>
+                <configuration>
+                    <appName>DiscordBot</appName>
+                    <processTypes>
+                        <web>java src/main/java/Bot</web>
+                    </processTypes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
